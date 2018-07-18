@@ -1,0 +1,26 @@
+* {
+    box-sizing: border-box;
+}
+
+.grid-box {
+    background: green;
+    height: 400px;
+    width: 400px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.rows {
+    display: flex;
+    height: 25%;
+    /* vertical-align: middle; */
+    line-height: 100px;
+    text-align: center;
+
+}
+
+.columns {
+    background: lightgray;
+    outline: 1px solid black;
+    width: 25%;
+}
