@@ -1,9 +1,74 @@
-* {
+/* * {
     box-sizing: border-box;
+} */
+
+.wrapper {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.h1_special {
+    font-size: 28px;
+    text-transform: uppercase;
+    width: 400px;
+    margin: 0 auto;
+}
+
+.timer-score {
+    display: flex;
+    justify-content: space-around;
+    width: 400px;
+    margin: 0 auto;
+}
+
+.left-center-right {
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+    background: grey;
+}
+
+.left {
+    width: 120px;
+    padding: 10px 5px;
+    text-align: left;
+    background: lightblue;
+}
+
+.right {
+    width: 120px;
+    padding-top: 10px;
+    background: lightblue;
+}
+
+.buttons {
+    background: lime;
+    outline: none;
+    border: 1px solid black;
+    border-radius: 4px;
+    margin: 10px 10px;
+    height: 30px;
+    width: 70px; 
+}
+
+.buttons:hover {
+    background: green;
+    outline: none;
+    border: 2px solid black;
+}
+
+.reset {
+    background: red;
+}
+
+.reset:hover {
+    background: maroon;
 }
 
 .grid-box {
-    background: white;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 2px solid black;
     height: 400px;
     width: 400px;
     margin: 0 auto;
@@ -12,13 +77,11 @@
 .rows {
     display: flex;
     text-align: center;
-
 }
 
 .columns {
-    /* background-color: rgba(0, 255, 0, 1); */
     background-color: green;
-    outline: 1px solid black;
+    border: 1px solid black;
 }
 
 .columns:hover {
@@ -27,4 +90,9 @@
 
 .columns:active {
     background: red;
+}
+
+.q-a {
+    width: 400px;
+    margin: 0 auto;
 }
