@@ -3,24 +3,28 @@
 }
 
 .grid-box {
-    background: green;
+    background: white;
     height: 400px;
     width: 400px;
     margin: 0 auto;
-    padding: 10px;
 }
 
 .rows {
     display: flex;
-    height: 25%;
-    /* vertical-align: middle; */
-    line-height: 100px;
     text-align: center;
 
 }
 
 .columns {
-    background: lightgray;
+    /* background-color: rgba(0, 255, 0, 1); */
+    background-color: green;
     outline: 1px solid black;
-    width: 25%;
+}
+
+.columns:hover {
+    background: black;
+}
+
+.columns:active {
+    background: red;
 }
