@@ -57,11 +57,11 @@
     border: 2px solid black;
 }
 
-.reset {
+.reset-btn {
     background: red;
 }
 
-.reset:hover {
+.reset-btn:hover {
     background: maroon;
 }
 
