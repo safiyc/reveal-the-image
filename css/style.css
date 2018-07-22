@@ -42,7 +42,7 @@
 }
 
 .buttons {
-    background: lime;
+    background: green;
     outline: none;
     border: 1px solid black;
     border-radius: 4px;
@@ -52,17 +52,13 @@
 }
 
 .buttons:hover {
-    background: green;
+    background: lime;
     outline: none;
     border: 2px solid black;
 }
 
-.reset-btn {
+.buttons:active {
     background: red;
-}
-
-.reset-btn:hover {
-    background: maroon;
 }
 
 .grid-box {
@@ -79,16 +75,17 @@
     text-align: center;
 }
 
-.columns {
+.column-btns {
     background-color: green;
     border: 1px solid black;
+    outline: none;
 }
 
-.columns:hover {
+.column-btns:hover {
     background: black;
 }
 
-.columns:active {
+.column-btns:active {
     background: red;
 }
 
