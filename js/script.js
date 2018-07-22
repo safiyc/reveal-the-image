@@ -11,9 +11,29 @@ let row;
 let column;
 let columns;
 
-gridBox.style.backgroundImage = "url('./img/soccerball.jpg')";
 document.getElementById("timer").textContent = timer;
 document.getElementById("score").textContent = score;
+
+
+
+// randomize gridBox bg image
+function randomBgImg () {
+    let randomNum = Math.floor(Math.random() * 3) + 1;
+
+    switch(randomNum) {
+        case 1:
+            alert("1 - ball");
+            gridBox.style.backgroundImage = "url('./img/soccerball.jpg')";
+            break;
+        case 2:
+            alert("2 - rock");
+            gridBox.style.backgroundImage = "url('./img/rock.png')";
+            break;
+        case 3:
+            alert("3 - disc");
+            gridBox.style.backgroundImage = "url('./img/frisbees.jpg')";
+    }
+}
 
 // timer
 let timerCountDown = setInterval(function () {
@@ -57,6 +77,7 @@ function createGrid (gridSize) {
             column.setAttribute("value", "1");
         }
     }
+    randomBgImg();
     breakBlock();
 }
 
