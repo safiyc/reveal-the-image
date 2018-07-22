@@ -5,7 +5,7 @@ gridBox.style.backgroundImage = "url('./img/soccerball.jpg')";
 
 const normal = document.querySelector("#normal");
 const hard = document.querySelector("#hard");
-const reset = document.getElementById("reset");
+// const reset = document.getElementById("reset");
 // let score = document.getElementById("score");
 
 let columns;
@@ -17,26 +17,19 @@ let levels;
 let score = 100;
 document.getElementById("score").innerHTML = score;
 
-
-// need to fix
-
-levels = document.querySelectorAll(".levels");
-levels.forEach(function (level) {
-    level.addEventListener("click", function () {
-        // resetIt();
-        if (level.getAttribute("id") === "normal") {
-            gridSize = 16;
-        } else if (level.getAttribute("id") === "hard") {
-            gridSize = 24;
-        } else if (level.getAttribute("id") === "reset") {
-            gridSize = 16;
-        }
-        // createGrid();
-    });
+normal.addEventListener("click", function () {
+    resetIt();
+    gridSize = 16;
+    createGrid(gridSize);
 });
 
-function createGrid () {
-    // resetIt();
+hard.addEventListener("click", function () {
+    resetIt();
+    gridSize = 24;
+    createGrid(gridSize);
+})
+
+function createGrid (gridSize) {
     for (let i = 1; i < (gridSize + 1); i++) {
         row = document.createElement("div");
         gridBox.appendChild(row);
@@ -53,11 +46,8 @@ function createGrid () {
             column.setAttribute("value", "1");
         }
     }
-    console.log(gridBox);
     breakBlock();
 }
-
-createGrid();
 
 // click div to make transparent; score is reduced
 function breakBlock () {
@@ -89,9 +79,15 @@ function resetIt () {
     score = 100;
     document.getElementById("score").innerHTML = score;
 
-    createGrid();
+    // gridSize = 16;
+    // createGrid(gridSize);
 }
 
-reset.addEventListener("click", function () {
-    resetIt();
-});
+// reset.addEventListener("click", function () {
+//     resetIt();
+// });
+
+// resetIt();
+
+
+createGrid(gridSize);
