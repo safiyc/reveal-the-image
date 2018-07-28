@@ -1,3 +1,5 @@
+// not a good thing to have these global variables; not secure
+
 // gridBox-> 400px by 400px
 const gridBox = document.querySelector(".grid-box");
 const normal = document.querySelector("#normal");
@@ -11,6 +13,7 @@ let timeAmount = t;
 let score = s;
 let timer;
 let columns;
+let randomImgNum;
 
 // create grid; default 16x16 blocks
 function createGrid (gridSize) {
@@ -35,15 +38,16 @@ function createGrid (gridSize) {
     document.getElementById("time-amount").textContent = timeAmount;
     document.getElementById("score").textContent = score;
 
-    randomBgImg();
+    randomizeImg();
+    linkImgToAnswer();
     breakBlock();
 }
 
-// randomize gridBox bg image
-function randomBgImg () {
-    let randomNum = Math.floor(Math.random() * 3) + 1;
+// randomize gridBox bg img and return value of img
+function randomizeImg () {
+    randomImgNum = Math.floor(Math.random() * 3) + 1;
 
-    switch(randomNum) {
+    switch(randomImgNum) {
         case 1:
             alert("1 - ball");
             gridBox.style.backgroundImage = "url('./img/soccerball.jpg')";
@@ -55,6 +59,28 @@ function randomBgImg () {
         case 3:
             alert("3 - disc");
             gridBox.style.backgroundImage = "url('./img/frisbees.jpg')";
+    }
+}
+
+// compare answer to img and display outcome
+function linkImgToAnswer () {
+    let answerBtns = document.querySelectorAll(".answer");
+
+    for (let i = 0; i < answerBtns.length; i++) {
+        answerBtns[i].addEventListener("click", function () {
+            if (answerBtns[i].getAttribute("value") == randomImgNum) {
+                console.log("correct match: ", randomImgNum);
+                // need to display win message
+                // need to reveal img
+
+                // implement localstorage to save score?
+            } else {
+                score -= 50;
+                console.log("incorrect match");
+                // when to display lose message? When score to 0? After all answers are clicked?
+            }
+            document.getElementById("score").textContent = score;
+        });
     }
 }
 
@@ -102,6 +128,7 @@ function startTimer () {
             if (timeAmount <= 0) {
                 columns.forEach(function (column) {
                     column.disabled = true;
+                    // display blocks disabled; time to guess?
                 });
             }
         }, 1000);
@@ -114,7 +141,7 @@ function resetIt () {
         gridBox.removeChild(gridBox.firstChild);
     }
 
-    timeAmount = g;
+    timeAmount = t;
     score = s;
 
     stopTimer(timer);

@@ -96,5 +96,13 @@
 
 .answers {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;   
+    width: 100%;
+    text-align: left;
+}
+
+.answers > div {
+    background: teal;
+    border: 1px solid black;
+    width: 150px;
 }
