@@ -1,73 +1,153 @@
-/* * {
-    box-sizing: border-box;
-} */
+html {
+    background: linear-gradient(160deg, #fceabb 0%,#fccd4d 50%,#f8b500 51%,#fbdf93 100%);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    min-width: 690px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    text-align: center;
+}
 
 .wrapper {
-    font-family: Arial, sans-serif;
-    text-align: center;
+    min-height: 100%;
+    min-width: 644px;
+    padding: 20px;
+    overflow-x: auto;
+}
+
+.hidden {
+    display: none;
+}
+
+#mssg-playagain {
+    font-weight: normal;
+    visibility: hidden;
+}
+
+.title-difficulty {
+    width: 400px;
+    padding: 0 122px;
+    margin: 0 auto;
+}
+
+h1 {
+    white-space: nowrap;
+    margin-bottom: 2px;
 }
 
 .h1_special {
     font-size: 28px;
     text-transform: uppercase;
-    width: 400px;
-    margin: 0 auto;
 }
 
-.timer-score {
+.difficulty {
     display: flex;
     justify-content: space-around;
-    width: 400px;
-    margin: 0 auto;
 }
 
-.left-center-right {
-    display: flex;
-    width: 80%;
-    margin: 0 auto;
-    background: grey;
-}
-
-.left {
-    width: 120px;
-    padding: 10px 5px;
-    text-align: left;
-    background: lightblue;
-}
-
-.right {
-    width: 120px;
-    padding-top: 10px;
-    background: lightblue;
-}
-
+/* normal, hard, rules btns */
 .buttons {
-    background: green;
+    background: rgb(33, 255, 33);
     outline: none;
     border: 1px solid black;
     border-radius: 4px;
     margin: 10px 10px;
     height: 30px;
     width: 70px; 
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, .9) inset;
+    transition: .25s;
 }
 
 .buttons:hover {
-    background: lime;
+    background: rgb(0, 199, 0);
     outline: none;
     border: 2px solid black;
+    box-shadow: none;
 }
 
 .buttons:active {
     background: red;
+    border: none;
+}
+
+#rules-btn {
+    background-color: lightblue;
+}
+
+#rules-btn:hover {
+    background-color: rgb(95, 191, 223);
+}
+
+#rules-btn:active {
+    background-color: teal;
+}
+
+.left-center-right {
+    display: flex;
+    justify-content: center;
+    width: 644px;
+    margin: 0 auto;
+}
+
+.left-right {
+    padding: 0 5px 0 5px;
+}
+
+.left {
+    width: 120px;
+    padding-top: 10px;
+    padding-left: 1px;
+    text-align: left;
+    background: rgba(173, 216, 230, .5);
+    border: 1px solid black;
+    border-right: none;
+}
+
+.right {
+    width: 120px;
+    padding-top: 10px;
+    background: rgba(173, 216, 230, .5);
+    border: 1px solid black;
+    border-left: none;
+}
+
+.grid-object {
+    position: relative;
+    border: 2px solid black;
+    height: 400px;
+    min-width: 400px;
+}
+
+.rules-box {
+    position: absolute;
+    background-color: rgba(190, 225, 250, 0.9);
+    height: 400px;
+    width: 400px;
+}
+
+.rules-list {
+    /* font-weight: bold; */
+    text-transform: uppercase;
+    font-size: 13px;
+    text-align: left;
+    padding: 10px 15px 0 15px;
+}
+
+.rules-spacing {
+    margin: 15px 0 0 0;
+    padding: 0 0 0 10px;
 }
 
 .grid-box {
+    position: absolute;
     background-size: cover;
     background-repeat: no-repeat;
-    border: 2px solid black;
-    height: 400px;
-    width: 400x;
-    margin: 0 auto;
 }
 
 .rows {
@@ -89,20 +169,101 @@
     background: red;
 }
 
-.q-a {
-    width: 400px;
-    margin: 0 auto;
+.result-display {
+    margin: 0 auto 15px;
+    width: 106px;
+    height: 25px;
+    line-height: 26px;
 }
 
-.answers {
-    display: flex;
-    justify-content: space-evenly;   
-    width: 100%;
-    text-align: left;
+.answer {
+    background-color: teal;
+    border: 2px solid black;
+    outline: none;
+    width: 106px;
+    height: 25px;
+    margin-bottom: 2px;
+    transition: .25s;
 }
 
-.answers > div {
-    background: teal;
+.answer:hover {
+    background-color: lightblue;
+}
+
+.score-time {
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.info-box {
+    background-color: rgba(0, 128, 128, .75);
+    border: 2px solid black;
+    border-bottom: 1px solid black;
+    outline: none;
+    width: 104px;
+    padding: 0;
+    margin: 0;
+}
+
+.info-title {
+    background-color: rgba(0, 128, 128, .75);
+    text-align: center;
+    padding: 4px 2px 4px 2px;
+    margin: 0;
+}
+
+.info-box-score {
+    background-color: lightblue;
+    height: 17px;
+    padding: 5px 0 4px 12px;
+    margin: 0;
+}
+
+.your-score {
+    margin: 0;
+    padding: 0 0 0 5px;
+}
+
+.info-box-ranking {
+    background-color: lightblue;
+    height: 85px;
+    padding: 5px 0 4px 12px;
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0 0 0 5px;
+}
+
+.delete-btn {
+    background: rgb(255, 98, 40);
+    outline: none;
     border: 1px solid black;
-    width: 150px;
+    height: 30px;
+    width: 108px;
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, .9) inset;
+    transition: .25s;
+}
+
+.delete-btn:hover {
+    background: red;
+    outline: none;
+    border: 2px solid black;
+    box-shadow: none;
+}
+
+.delete-btn:active {
+    background: black;
+    color: white;
+}
+
+footer {
+    font-weight: normal;
+}
+
+a {
+    color: black;
+    text-decoration: none;
 }

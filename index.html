@@ -4,68 +4,81 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/style.css">
+        <link rel="icon" href="img/my_favicon.png">
         <title>Reveal the Image</title>
     </head>
     <body>
         <div class="wrapper">
-            <h1>R<span class="h1_special">eveal</span> <span class="h1_special">the</span> I<span class="h1_special">mage</span></h1>
-            <div class="timer-score">
-                <div>Score: &nbsp <span id="score"></span></div>
-                
-                <div>Timer: &nbsp <span id="time-amount"></span></div>
-            </div>
-            <div class="left-center-right">
-                <div class="left">
-                    Ranking<br> 
-                    (local storage)
-                    <br>
-                    <br>
-                    <p>Normal:</p>
-                    85pts - abc<br>
-                    75pts - def<br>
-                    60pts - xyz<br>
-                    <p>Hard:</p>
-                    65pts - abc<br>
-                    45pts - def<br>
-                    30pts - xyz
-                </div>
-    
-                <div class="grid-box"></div>
-
-                <div class="right">
+            <div class="title-difficulty">
+                <h1>R<span class="h1_special">eveal</span> <span class="h1_special">the</span> I<span class="h1_special">mage</span></h1>
+                <div id="mssg-playagain"><sub>&#8601</sub>----- play again -----<sub>&#8600</sub></div>
+                <div class="difficulty">
                     <button class="buttons" id="normal">Normal</button>
+                    <button class="buttons" id="rules-btn">Rules</button>
                     <button class="buttons" id="hard">Hard</button>
                 </div>
             </div>
-            <div class="q-a">
-                <p>Guess the image:</p>
-                <div class="answers">
-                    <div>
-                        <input class="answer" type="radio" name="choices" value="1">dog
-                    </div>
-                    <div>
-                        <input class="answer" type="radio" name="choices" value="2">cat
+            <div class="left-center-right">
+                <div class="left">
+                    <div class="left-right">
+                        <div class="score-time">
+                            <div>Score: &nbsp <span id="score"></span></div>
+                            <div>Timer: &nbsp <span id="time-amount"></span></div>
+                        </div>
+                        <div class="info-box">
+                            <p class="info-title">Your Score</p>
+                            <div class="info-box-score">
+                                <p class="your-score"></p>
+                            </div>
+                            <p class="info-title">High Scores</p>
+                            <div class="info-box-ranking">
+                                <ul class="ranking-list"></ul>
+                            </div>
+                        </div>
+                        <button class="delete-btn" id="delete-scores">Delete Scores</button>
                     </div>
                 </div>
-                <div class="answers">
-                        <div>
-                            <input class="answer" type="radio" name="choices" value="3">horse
-                        </div>
-                        <div>
-                            <input class="answer" type="radio" name="choices" value="4">elephant
-                        </div>
+                <div class="grid-object">
+                    <div class="grid-box"></div>
+                    <div class="rules-box hidden">
+                        <small>*click Rules button to hide this info box</small>
+                        <br />
+                        <ul class="rules-list">
+                            <li class="rules-spacing">Timer starts after 1st block is clicked. 1 point off for every second.</li>
+                            <li class="rules-spacing">After timer reaches 0, clicking on blocks is disabled. 2 points off for every second.</li>
+                            <li class="rules-spacing">Each block has 2 levels of clicks.
+                                <ul>
+                                    <li class="rules-spacing">First click level reveals a blur of the background image. 2 points off.</li>
+                                    <li class="rules-spacing">2nd click level reveals removes the blur. 3 points off.</li>
+                                </ul>
+                            <li class="rules-spacing">Clicking on a wrong answer will take off 100 points.</li>
+                            <li class="rules-spacing">Normal mode starts at 500 points. Hard mode starts at 550 points.</li>
+                            <li class="rules-spacing">Top 5 high scores are stored locally in the browser.</li>
+                            <li class="rules-spacing">Scores less than -500 are displayed as -500.</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="answers">
-                        <div>
-                            <input class="answer" type="radio" name="choices" value="5">lion
-                        </div>
-                        <div>
-                            <input class="answer" type="radio" name="choices" value="6">deer
-                        </div>
+                <div class="right">
+                    <div class="left-right">
+                        <p class="result-display">Guess It!</p>
+                        <button class="answer" value="7">Armadillo</button>
+                        <button class="answer" value="1">Beaver</button>
+                        <button class="answer" value="13">Bull</button>
+                        <button class="answer" value="2">Cat</button>
+                        <button class="answer" value="3">Dog</button>
+                        <button class="answer" value="8">Elephant</button>
+                        <button class="answer" value="4">Fox</button>
+                        <button class="answer" value="9">Gecko</button>
+                        <button class="answer" value="10">Kangaroo</button>
+                        <button class="answer" value="11">Meerkat</button>
+                        <button class="answer" value="5">Rabbit</button>
+                        <button class="answer" value="6">Raccoon</button>
+                        <button class="answer" value="12">Tiger</button>
+                    </div>
                 </div>
             </div>
         </div>
-
+        <footer><a href="http://www.safiycham.com/" target="_blank">Safiy Cham &nbsp;&#169;&nbsp;<span id="copyright"></span></a></footer>
         <script src="js/script.js"></script>
     </body>
 </html>
