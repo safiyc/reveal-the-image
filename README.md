@@ -1,11 +1,11 @@
 # Reveal The Image
 ### By Safiy Cham
 
-## Technologies used: JavaScript, HTML, CSS
+## Technologies: JavaScript, HTML, CSS
 
 ## Description
 
-A game involving guessing what an animal is by removing opaque blocks overlaying an animal image. Each time a block is removed, points are taken off. The goal is to pick the correct animal from a selection of animals with as few moves as possible to earn a high score.
+A game involving guessing what an animal is by removing green blocks overlaying an animal image. Each time a block is removed, points are taken off. The goal is to pick the correct animal from a selection of animals with as few moves as possible to earn a high score.
 
 ## Technical Details
 
@@ -20,7 +20,6 @@ A game involving guessing what an animal is by removing opaque blocks overlaying
 
 ## Pending Tasks
 * A larger pool of possible correct animals
-* Responsive Web Design
 * Revise to ES6
 * DRY
 

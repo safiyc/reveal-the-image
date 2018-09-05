@@ -1,5 +1,3 @@
-// not a good thing to have these global variables; not secure
-
 // gridBox-> 400px by 400px
 const gridBox = document.querySelector(".grid-box");
 const normal = document.querySelector("#normal");

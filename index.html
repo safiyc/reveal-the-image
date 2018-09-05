@@ -20,23 +20,21 @@
             </div>
             <div class="left-center-right">
                 <div class="left">
-                    <div class="left-right">
-                        <div class="score-time">
-                            <div>Score: &nbsp <span id="score"></span></div>
-                            <div>Timer: &nbsp <span id="time-amount"></span></div>
-                        </div>
-                        <div class="info-box">
-                            <p class="info-title">Your Score</p>
-                            <div class="info-box-score">
-                                <p class="your-score"></p>
-                            </div>
-                            <p class="info-title">High Scores</p>
-                            <div class="info-box-ranking">
-                                <ul class="ranking-list"></ul>
-                            </div>
-                        </div>
-                        <button class="delete-btn" id="delete-scores">Delete Scores</button>
+                    <div class="score-time">
+                        <div>Score: &nbsp <span id="score"></span></div>
+                        <div>Timer: &nbsp <span id="time-amount"></span></div>
                     </div>
+                    <div class="info-box">
+                        <p class="info-title">Your Score</p>
+                        <div class="info-box-score">
+                            <p class="your-score"></p>
+                        </div>
+                        <p class="info-title">High Scores</p>
+                        <div class="info-box-ranking">
+                            <ul class="ranking-list"></ul>
+                        </div>
+                    </div>
+                    <button class="delete-btn" id="delete-scores">Delete Scores</button>
                 </div>
                 <div class="grid-object">
                     <div class="grid-box"></div>
@@ -59,8 +57,8 @@
                     </div>
                 </div>
                 <div class="right">
-                    <div class="left-right">
-                        <p class="result-display">Guess It!</p>
+                    <p class="result-display">Guess It!</p>
+                    <div class="answer-btns">
                         <button class="answer" value="7">Armadillo</button>
                         <button class="answer" value="1">Beaver</button>
                         <button class="answer" value="13">Bull</button>
@@ -74,6 +72,9 @@
                         <button class="answer" value="5">Rabbit</button>
                         <button class="answer" value="6">Raccoon</button>
                         <button class="answer" value="12">Tiger</button>
+                        <!-- below divs to make mobile answers layout symmetrical; no other function -->
+                        <button class="hide-btn"></button>
+                        <button class="hide-btn"></button>
                     </div>
                 </div>
             </div>
