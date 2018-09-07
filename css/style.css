@@ -58,8 +58,10 @@ h1 {
     border: 1px solid black;
     border-radius: 4px;
     margin: 10px 10px;
-    height: 30px;
-    width: 70px; 
+    height: 35px;
+    width: 85px; 
+    -webkit-box-shadow: 0 0 0 2px rgba(255, 255, 255, .9) inset;
+    -moz-box-shadow: 0 0 0 2px rgba(255, 255, 255, .9) inset;
     box-shadow: 0 0 0 2px rgba(255, 255, 255, .9) inset;
     transition: .25s;
 }
@@ -68,6 +70,8 @@ h1 {
     background: rgb(0, 199, 0);
     outline: none;
     border: 2px solid black;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
     box-shadow: none;
 }
 
@@ -128,15 +132,14 @@ h1 {
 }
 
 .rules-list {
-    /* font-weight: bold; */
     text-transform: uppercase;
-    font-size: 13px;
+    font-size: .8rem;
     text-align: left;
     padding: 10px 15px 0 15px;
 }
 
 .rules-spacing {
-    margin: 15px 0 0 0;
+    margin: 14px 0 0 0;
     padding: 0 0 0 10px;
 }
 
@@ -188,7 +191,7 @@ h1 {
 
 .hide-btn {
     display: none;
-    background: rgb(117, 117, 117);
+    background: dimgrey;
     border: 2px solid black;
     outline: none;
     width: 106px;
@@ -249,19 +252,26 @@ ul {
 }
 
 .delete-btn {
-    background: rgb(255, 98, 40);
+    background: red;
     outline: none;
     border: 1px solid black;
-    height: 30px;
+    height: 35px;
     width: 108px;
+    font-weight: bolder;
+    font-size: .75rem;
+    -webkit-box-shadow: 0 0 0 2px rgba(255, 255, 255, .9) inset;
+    -moz-box-shadow: 0 0 0 2px rgba(255, 255, 255, .9) inset;
     box-shadow: 0 0 0 2px rgba(255, 255, 255, .9) inset;
     transition: .25s;
 }
 
 .delete-btn:hover {
-    background: red;
+    background: darkred;
     outline: none;
     border: 2px solid black;
+    font-size: .7rem;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
     box-shadow: none;
 }
 
@@ -304,7 +314,6 @@ a {
         display: flex;
         justify-content: space-evenly;
         padding-top: 8px;
-        padding-bottom: 8px;
     }
 
     .info-box {
@@ -334,7 +343,7 @@ a {
     }
 
     .result-display {
-        margin: 0 auto 8px;
+        margin: 0 auto;
 
     }
 
@@ -346,11 +355,18 @@ a {
     }
     
     .answer {
-        margin-top: 10px;
+        margin-top: 5px;
+        width: 100px;
+        height: 35px;
+        font-weight: bold;
     }
 
     .hide-btn {
         display: unset;
+        margin-top: 5px;
+        width: 100px;
+        height: 35px;
+        font-weight: bold;
     }
 
     footer {
