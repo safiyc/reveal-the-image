@@ -23,6 +23,9 @@ A game involving guessing what an animal is by removing green blocks overlaying 
 * Revise to ES6
 * DRY
 
+## Bugs
+* Issue only occurs on mobile phone: on initial page load, random gaps between grid rows; only known fix is to refresh page
+
 ## Links
 
 #### Launch Program - [Reveal The Image](https://safiyc.github.io/reveal-the-image/)

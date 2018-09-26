@@ -1,4 +1,3 @@
-// gridBox-> 400px by 400px
 const gridBox = document.querySelector(".grid-box");
 const normal = document.querySelector("#normal");
 const hard = document.querySelector("#hard");
@@ -24,13 +23,13 @@ function createGrid (gridSize) {
         row = document.createElement("div");
         gridBox.appendChild(row);
         row.classList.add("rows");
-        row.setAttribute("style", `height: ${400/gridSize}px`);
+        row.setAttribute("style", `height: ${100/gridSize}%`);
         
         for (let j = 1; j < (gridSize + 1); j++) {
-            column = document.createElement("button");
+            column = document.createElement("div");
             row.appendChild(column);
             column.classList.add("column-btns");
-            column.setAttribute("style", `width: ${400/gridSize}px`);
+            column.setAttribute("style", `width: ${100/gridSize}%`);
             column.setAttribute("value", "1");
         }
     }
@@ -49,33 +48,33 @@ function randomizeImg () {
 
     switch(randomImgNum) {
         case 1:
-            gridBox.style.height = "400px";
-            gridBox.style.width = "400px";
+            gridBox.style.height = "100%";
+            gridBox.style.width = "100%";
             gridBox.style.backgroundImage = "url('./img/beaver.jpg')";
             break;
         case 2:
-            gridBox.style.height = "400px";
-            gridBox.style.width = "400px";
+            gridBox.style.height = "100%";
+            gridBox.style.width = "100%";
             gridBox.style.backgroundImage = "url('./img/cats.jpg')";
             break;
         case 3:
-            gridBox.style.height = "400px";
-            gridBox.style.width = "400px";
+            gridBox.style.height = "100%";
+            gridBox.style.width = "100%";
             gridBox.style.backgroundImage = "url('./img/dog.jpg')";
             break;
         case 4:
-            gridBox.style.height = "400px";
-            gridBox.style.width = "400px";
+            gridBox.style.height = "100%";
+            gridBox.style.width = "100%";
             gridBox.style.backgroundImage = "url('./img/fox.jpg')";
             break;
         case 5:
-            gridBox.style.height = "400px";
-            gridBox.style.width = "400px";
+            gridBox.style.height = "100%";
+            gridBox.style.width = "100%";
             gridBox.style.backgroundImage = "url('./img/rabbit.jpg')";
             break;
         case 6:
-            gridBox.style.height = "400px";
-            gridBox.style.width = "400px";
+            gridBox.style.height = "100%";
+            gridBox.style.width = "100%";
             gridBox.style.backgroundImage = "url('./img/raccoon.jpg')";
     }
 }
