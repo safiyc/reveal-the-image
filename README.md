@@ -19,7 +19,6 @@ A game involving guessing what an animal is by removing green blocks overlaying 
 * More info can be found in the "Rules" page of the game webpage (link below)
 
 ## Pending Tasks
-* A larger pool of possible correct animals
 * Revise to ES6
 * DRY
 

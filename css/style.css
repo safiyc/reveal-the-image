@@ -99,7 +99,7 @@ h1 {
 
 .left {
     width: 7.5rem;
-    padding: .625rem .3125rem 0 .375rem; 
+    padding: .625rem 0 0 .688rem; 
     text-align: left;
     background: rgba(173, 216, 230, .5);
     border: .0625rem solid black;
@@ -113,7 +113,6 @@ h1 {
     background: rgba(173, 216, 230, .5);
     border: .0625rem solid black;
     border-left: none;
-
 }
 
 .grid-object {
@@ -133,21 +132,33 @@ h1 {
 
 .rules-box {
     position: absolute;
-    background-color: rgba(190, 225, 250, 0.9);
+    background-color: rgba(190, 225, 250, 0.97);
     height: 100%;
-    width: 100%;    
+    width: 100%;
     overflow: auto;
+}
+
+.rules-begin-end {
+    display: block;
+    text-align: left;
+    padding: 0 1.65rem;
+    margin-top: .5rem;
 }
 
 .rules-list {
     text-transform: uppercase;
     font-size: .8rem;
     text-align: left;
-    padding: .625rem .9375rem 0;
+    padding: 0 .9375rem 0;
 }
 
 .rules-spacing {
     margin: .875rem 0 0 0;
+    padding: 0 0 0 .625rem;
+}
+
+.rules-spacing-top {
+    margin: .5rem 0 0 0;
     padding: 0 0 0 .625rem;
 }
 
@@ -221,7 +232,6 @@ h1 {
     width: 6.5rem;
     padding: 0;
     margin: 0;
-
 }
 
 .info-title {
@@ -268,7 +278,6 @@ ul {
     -moz-box-shadow: 0 0 0 .125rem rgba(255, 255, 255, .9) inset;
     box-shadow: 0 0 0 .125rem rgba(255, 255, 255, .9) inset;
     transition: .25s;
-
 }
 
 .delete-btn:hover {
