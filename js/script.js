@@ -345,3 +345,12 @@ document.getElementById("copyright").textContent = date.getFullYear();
 createGrid(gridSize);
 linkImgToAnswer();
 retrieveLocalStorage();
+
+// run only once after initial page load to fix mobile screen green blocks
+// display issue on initial page load
+window.onload = function () {
+    if(!window.location.hash) {
+        window.location = window.location + '#loaded';
+        window.location.reload();
+    }
+}

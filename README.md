@@ -23,7 +23,7 @@ A game involving guessing what an animal is by removing green blocks overlaying 
 * DRY
 
 ## Bugs
-* Issue only occurs on mobile phone: on initial page load, random gaps between grid rows; only known fix is to refresh page
+* No known bugs
 
 ## Links
 
