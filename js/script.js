@@ -278,7 +278,7 @@ function startTimer () {
             columns.forEach(function (column) {
                 column.disabled = true;
             });
-            console.log("This should print when timer reaches 0.");
+            // console.log("This should print when timer reaches 0.");
         }
     }, 1000);
 }
